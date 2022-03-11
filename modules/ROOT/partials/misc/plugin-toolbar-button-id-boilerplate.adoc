@@ -1,3 +1,7 @@
+ifndef::pluginpage[]
+:pluginpage: {plugincode}.adoc
+endif::[]
+
 ifeval::["{docname}" == "available-toolbar-buttons"]
 
 == {pluginname} plugin
@@ -11,7 +15,12 @@ ifeval::["{altplugincode}" == "nil"]
 include::partial$toolbar-button-ids/{plugincode}-toolbar-buttons.adoc[]
 endif::[]
 
+ifdef::pluginpage[]
+For information on the {pluginname} plugin, see: xref:{pluginpage}[Plugins - The {pluginname} plugin]
+endif::[]
+ifndef::pluginpage[]
 For information on the {pluginname} plugin, see: xref:{plugincode}.adoc[Plugins - The {pluginname} plugin]
+endif::[]
 
 endif::[]
 ifeval::["{docname}" != "available-toolbar-buttons"]
